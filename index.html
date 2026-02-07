@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>珍貴人工智能 AI教育培訓 | 教師AI實戰課程</title>
+    <meta name="description" content="為香港學校提供專業教師AI培訓，獲Google Cloud創業資助。教完唔係完，跟到你識用。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': '#7c3aed',
+                        'brand-light': '#a78bfa',
+                        'brand-dark': '#5b21b6',
+                        'accent': '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 50%, #4c1d95 100%); }
+        .badge-google { background: linear-gradient(90deg, #4285f4, #34a853, #fbbc05, #ea4335); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-2xl">💎</span>
+                <div>
+                    <div class="text-lg font-bold text-brand">珍貴人工智能</div>
+                    <div class="text-xs text-gray-500">AI教育培訓</div>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#courses" class="text-gray-600 hover:text-brand transition">課程方案</a>
+                <a href="#features" class="text-gray-600 hover:text-brand transition">我哋唔同</a>
+                <a href="#pricing" class="text-gray-600 hover:text-brand transition">收費</a>
+                <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg font-semibold hover:bg-brand-dark transition">WhatsApp 查詢</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#courses" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">課程方案</a>
+            <a href="#features" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">我哋唔同</a>
+            <a href="#pricing" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">收費</a>
+            <a href="#contact" class="block px-4 py-3 text-brand font-semibold hover:bg-gray-50">WhatsApp 查詢</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-6xl mx-auto px-4 py-20 text-center">
+            <!-- Google Badge -->
+            <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
+                <span class="text-white/90 text-sm">🌐 獲 </span>
+                <span class="font-bold text-sm mx-1 badge-google">Google Cloud</span>
+                <span class="text-white/90 text-sm"> 創業資助</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                教完唔係完
+            </h1>
+            <p class="text-3xl md:text-5xl text-purple-200 font-light mb-4">
+                跟到你識用
+            </p>
+            <p class="text-xl text-purple-100 max-w-2xl mx-auto mb-4 mt-10">
+                為香港學校提供 <strong class="text-white">實戰型</strong> 教師AI培訓
+            </p>
+            <p class="text-lg text-purple-200 max-w-xl mx-auto mb-10">
+                唔係講完理論就走，<br>
+                係 <span class="text-accent font-bold">3個月WhatsApp跟進</span> + <span class="text-accent font-bold">50+即用Prompt範本</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="inline-block bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-600 transition shadow-lg">
+                    📱 WhatsApp 免費諮詢
+                </a>
+                <a href="#pricing" class="inline-block bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition border border-white/30">
+                    💰 睇收費
+                </a>
+            </div>
+            
+            <!-- Trust indicators -->
+            <div class="mt-16 flex flex-wrap justify-center gap-8 text-purple-200 text-sm">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">✅</span>
+                    <span>報價 &lt;$50K 免招標</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🎯</span>
+                    <span>配合「智啟學教」$50萬撥款</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🇭🇰</span>
+                    <span>專為香港教師設計</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8">你係咪試過...</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-400">
+                    <p class="text-gray-700">「上完AI工作坊，返到學校唔知點用」😵</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-400">
+                    <p class="text-gray-700">「想用AI備課，但成日唔知點落Prompt」🤔</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-400">
+                    <p class="text-gray-700">「有問題想問，但課程完咗冇人理」😢</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-brand mb-4">我哋唔同嘅地方</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                市場上好多培訓「教完就走」，我哋唔係
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 bg-brand rounded-xl flex items-center justify-center text-2xl">
+                            📱
+                        </div>
+                        <h3 class="text-xl font-bold text-brand">3個月 WhatsApp 跟進</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">課後有問題？直接 WhatsApp 問。</p>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>✓ 專屬群組，唔係公海</li>
+                        <li>✓ 24小時內回覆</li>
+                        <li>✓ 幫你debug個prompt</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gradient-to-br from-amber-50 to-white p-8 rounded-2xl border border-amber-100">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center text-2xl">
+                            📋
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-600">50+ Prompt 範本庫</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">唔使由零開始，即抄即用。</p>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>✓ 中英數通識各科都有</li>
+                        <li>✓ 出卷、改文、備課一應俱全</li>
+                        <li>✓ 持續更新，唔會過時</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl border border-green-100">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center text-2xl">
+                            🎯
+                        </div>
+                        <h3 class="text-xl font-bold text-green-600">實戰為主</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">70% 動手做，30% 講解。</p>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>✓ 每個老師都會落手做</li>
+                        <li>✓ 用你自己嘅真實教材練習</li>
+                        <li>✓ 上完即刻可以用</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border border-blue-100">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center text-2xl">
+                            🤖
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-600">私人AI助理（進階）</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">想再上一層樓？</p>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>✓ 設置專屬AI助理</li>
+                        <li>✓ 自動化重複工作</li>
+                        <li>✓ 市面上冇人有</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-brand mb-4">課程內容</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                專為香港教師設計，配合 Gemini（香港可用）
+            </p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Module 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-3xl mb-4">💡</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">模組一：AI基礎 + Prompt技巧</h3>
+                    <p class="text-gray-600 text-sm mb-3">1.5小時</p>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• 生成式AI原理（唔講太深）</li>
+                        <li>• Gemini 實操</li>
+                        <li>• Prompt Engineering 核心技巧</li>
+                        <li>• 避開AI幻覺</li>
+                    </ul>
+                </div>
+                
+                <!-- Module 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-3xl mb-4">📝</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">模組二：出卷 + 改文 + 備課</h3>
+                    <p class="text-gray-600 text-sm mb-3">2小時</p>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• AI出卷神器（各科範例）</li>
+                        <li>• 作文批改 + 評語生成</li>
+                        <li>• 教案 + 工作紙製作</li>
+                        <li>• 建立個人Prompt庫</li>
+                    </ul>
+                </div>
+                
+                <!-- Module 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-3xl mb-4">🎨</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">模組三：AI生成圖片+影片</h3>
+                    <p class="text-gray-600 text-sm mb-3">1.5小時</p>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• AI圖片生成（教材配圖）</li>
+                        <li>• 簡單AI影片製作</li>
+                        <li>• 文字轉語音</li>
+                        <li>• 實用工具推介</li>
+                    </ul>
+                </div>
+                
+                <!-- Module 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-3xl mb-4">🤖</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">模組四：私人AI助理概念</h3>
+                    <p class="text-gray-600 text-sm mb-3">1小時</p>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• 超越單次對話</li>
+                        <li>• 自動化工作流程</li>
+                        <li>• OpenClaw 介紹</li>
+                        <li>• 係咪適合你？</li>
+                    </ul>
+                </div>
+                
+                <!-- Module 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-3xl mb-4">⚖️</div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">模組五：AI倫理 + 學校政策</h3>
+                    <p class="text-gray-600 text-sm mb-3">1小時</p>
+                    <ul class="text-gray-600 text-sm space-y-1">
+                        <li>• 版權 + 私隱考量</li>
+                        <li>• 學校AI使用指引範本</li>
+                        <li>• 學生學術誠信</li>
+                        <li>• 制定科組指引</li>
+                    </ul>
+                </div>
+                
+                <!-- Bonus -->
+                <div class="bg-gradient-to-br from-brand to-brand-dark p-6 rounded-xl shadow-sm text-white">
+                    <div class="text-3xl mb-4">🎁</div>
+                    <h3 class="text-lg font-bold mb-2">課後支援（包埋）</h3>
+                    <p class="text-purple-100 text-sm mb-3">3個月</p>
+                    <ul class="text-purple-100 text-sm space-y-1">
+                        <li>• WhatsApp 專屬群組</li>
+                        <li>• 50+ Prompt 範本庫</li>
+                        <li>• 每月更新資源</li>
+                        <li>• 有問必答</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-brand mb-4">收費方案</h2>
+            <p class="text-gray-600 text-center mb-4 max-w-2xl mx-auto">
+                配合教育局「智啟學教」$50萬撥款
+            </p>
+            <p class="text-accent font-semibold text-center mb-12">
+                💡 報價 &lt;$50,000 免招標程序
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Package A -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-brand transition">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-gray-800">入門版</h3>
+                        <p class="text-gray-500 text-sm mt-1">Package A</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-brand">$25,000</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>6小時培訓（1日）</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>模組一至三</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>最多20位老師</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>30+ Prompt範本</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>1個月WhatsApp支援</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-gray-100 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+                        查詢詳情
+                    </a>
+                </div>
+                
+                <!-- Package B - Featured -->
+                <div class="bg-gradient-to-b from-brand to-brand-dark rounded-2xl p-8 text-white transform md:scale-105 shadow-xl relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">最受歡迎</span>
+                    </div>
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold">標準版</h3>
+                        <p class="text-purple-200 text-sm mt-1">Package B</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold">$38,000</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent mt-1">✓</span>
+                            <span>12小時培訓（2日）</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent mt-1">✓</span>
+                            <span>全部5個模組</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent mt-1">✓</span>
+                            <span>最多30位老師</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent mt-1">✓</span>
+                            <span>50+ Prompt範本</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent mt-1">✓</span>
+                            <span><strong>3個月</strong>WhatsApp支援</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-accent mt-1">✓</span>
+                            <span>科組指引範本</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-accent text-white py-3 rounded-lg font-semibold hover:bg-amber-600 transition">
+                        立即查詢
+                    </a>
+                </div>
+                
+                <!-- Package C -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-brand transition">
+                    <div class="text-center mb-6">
+                        <h3 class="text-xl font-bold text-gray-800">全方位版</h3>
+                        <p class="text-gray-500 text-sm mt-1">Package C</p>
+                    </div>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-brand">$48,000</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>18小時培訓（3日）</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>全部模組 + 進階內容</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>最多40位老師</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>完整Prompt範本庫</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span><strong>6個月</strong>WhatsApp支援</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-600">
+                            <span class="text-green-500 mt-1">✓</span>
+                            <span>1次到校跟進（2小時）</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-gray-100 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+                        查詢詳情
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Add-on -->
+            <div class="mt-12 max-w-2xl mx-auto">
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+                    <h4 class="font-bold text-blue-800 mb-2">🤖 進階服務：私人AI助理設置</h4>
+                    <p class="text-blue-700 text-sm mb-3">為老師設置專屬AI助理，自動化重複工作</p>
+                    <p class="text-blue-800 font-semibold">$6,000 - $8,000 / 位（視乎數量）</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">聯絡我哋</h2>
+            <p class="text-purple-100 text-center mb-12 max-w-2xl mx-auto">
+                WhatsApp 直接傾，免費諮詢，冇壓力
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- WhatsApp CTA -->
+                <div class="bg-white rounded-2xl p-8 text-center">
+                    <div class="text-6xl mb-4">📱</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">WhatsApp 查詢</h3>
+                    <p class="text-gray-600 mb-6">直接同我哋傾，了解邊個方案最適合你學校</p>
+                    <a href="https://wa.me/85253488542?text=你好，我想查詢教師AI培訓課程" 
+                       class="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-600 transition shadow-lg">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        WhatsApp 我哋
+                    </a>
+                    <p class="text-gray-400 text-sm mt-4">通常 2 小時內回覆</p>
+                </div>
+                
+                <!-- Email Form -->
+                <div class="bg-white rounded-2xl p-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">或者留低聯絡方法</h3>
+                    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+                        <div>
+                            <label for="school" class="block text-gray-700 font-medium mb-1 text-sm">學校名稱</label>
+                            <input type="text" id="school" name="school" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition"
+                                placeholder="XX中學 / XX小學">
+                        </div>
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-1 text-sm">聯絡人</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition"
+                                placeholder="您的姓名">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-1 text-sm">WhatsApp / 電話</label>
+                            <input type="tel" id="phone" name="phone" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition"
+                                placeholder="9XXX XXXX">
+                        </div>
+                        <div>
+                            <label for="interest" class="block text-gray-700 font-medium mb-1 text-sm">有興趣嘅方案</label>
+                            <select id="interest" name="interest"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition">
+                                <option value="">請選擇</option>
+                                <option value="A">入門版 ($25,000)</option>
+                                <option value="B">標準版 ($38,000)</option>
+                                <option value="C">全方位版 ($48,000)</option>
+                                <option value="custom">想了解更多先決定</option>
+                            </select>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-brand text-white py-3 rounded-lg font-semibold hover:bg-brand-dark transition">
+                            提交查詢
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-2xl">💎</span>
+                        <div>
+                            <div class="font-bold">珍貴人工智能科技有限公司</div>
+                            <div class="text-sm text-gray-400">Precious AI Technology Limited</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        獲 Google Cloud 創業資助<br>
+                        專注為香港學校提供AI教育培訓
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">快速連結</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#courses" class="hover:text-white transition">課程內容</a></li>
+                        <li><a href="#features" class="hover:text-white transition">我哋唔同</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">收費方案</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">聯絡我哋</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">聯絡資訊</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>📱 WhatsApp: +852 5348 8542</li>
+                        <li>📧 info@preciousai.hk</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 珍貴人工智能科技有限公司. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
