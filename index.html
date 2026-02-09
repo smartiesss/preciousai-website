@@ -51,19 +51,49 @@
     {
       "@context": "https://schema.org",
       "@type": "Course",
-      "name": "AI實踐應用與資訊素養證書課程",
-      "description": "為香港中小學提供AI實踐應用與資訊素養課程，14節核心課程加選修單元，完成後獲發「創客認證」(AI Maker Certificate)。",
+      "name": "AI創客學堂 — AI實踐應用與資訊素養課程",
+      "alternateName": "AI Maker Academy",
+      "description": "為香港中小學提供14節AI實踐應用課程，採用Project-Based Learning，學生動手做AI chatbot、短片、遊戲。完成後獲發「創客認證」(AI Maker Certificate)。符合教育局「智啟學教」撥款要求。",
       "provider": {
         "@type": "EducationalOrganization",
-        "name": "珍貴人工智能科技有限公司"
+        "name": "珍貴人工智能科技有限公司",
+        "url": "https://preciousai.hk"
       },
-      "educationalLevel": "Primary and Secondary School",
+      "educationalLevel": ["Primary School", "Secondary School"],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "K-12 Students"
+      },
       "inLanguage": "zh-HK",
       "coursePrerequisites": "None",
+      "numberOfCredits": "14",
+      "timeRequired": "PT14H",
+      "teaches": ["AI應用", "Prompt Engineering", "資訊素養", "AI倫理", "Project-Based Learning"],
+      "assesses": "AI創客認證 (AI Maker Certificate)",
+      "educationalCredentialAwarded": "創客認證 (AI Maker Certificate)",
       "hasCourseInstance": {
         "@type": "CourseInstance",
         "courseMode": "onsite",
+        "courseWorkload": "14節課堂 + Demo Day",
+        "instructor": {
+          "@type": "Person",
+          "name": "珍貴人工智能導師團隊"
+        },
         "location": {
+          "@type": "Place",
+          "name": "學校校園",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hong Kong",
+            "addressCountry": "HK"
+          }
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "category": "智啟學教撥款適用",
+        "availableAtOrFrom": {
           "@type": "Place",
           "address": {
             "@type": "PostalAddress",
@@ -74,6 +104,46 @@
     }
     </script>
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "智啟學教撥款可以用嚟做乜？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "每間學校可獲 HK$500,000 撥款，用於提升學生AI素養、購買AI教育課程、舉辦AI活動等。我哋嘅課程符合撥款要求，可以用智啟學教撥款支付。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "課程適合邊個年級嘅學生？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "課程設計適合小四至中六學生，內容會按學生程度調整。核心課程14節，另有選修單元可供選擇。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "完成課程會有證書嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "會！學生完成課程並通過評核後，會獲頒「創客認證」(AI Maker Certificate)，證明具備AI應用能力。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "課程會唔會教學生用AI作弊？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "唔會。課程重點係教學生正確、負責任咁使用AI，包括AI倫理、資訊素養、學術誠信等。學生會明白AI係學習工具，唔係代替思考嘅捷徑。"
+          }
+        }
+      ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
