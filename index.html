@@ -625,6 +625,9 @@
                             });
                             const data = await res.json();
                             if (res.ok) {
+                                // Google Ads Conversion Tracking - 提交待開發客戶表單
+                                gtag('event', 'conversion', {'send_to': 'AW-17940714348/cxXnCO_cgPUbEOym5upC'});
+                                
                                 msg.className = 'p-4 rounded-lg text-center bg-green-100 text-green-700';
                                 msg.textContent = '✅ 查詢已收到！我哋會盡快聯絡你 😊';
                                 e.target.reset();
