@@ -235,8 +235,8 @@
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://app.preciousai.hk/pricing" class="inline-block bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-600 transition shadow-lg">
-                    🚀 立即開始 AI 學習
+                <a href="#student" class="inline-block bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-600 transition shadow-lg">
+                    🎓 學生課程
                 </a>
                 <a href="#teacher" class="inline-block bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition border border-white/30">
                     👨‍🏫 教師培訓
