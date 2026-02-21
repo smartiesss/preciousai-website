@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Precious AI - AI Teacher Training | Hong Kong Schools</title>
-    <meta name="description" content="Professional AI training for Hong Kong schools. Google Cloud funded startup. We don't just teach - we support you until you master it.">
+    <title>Precious AI | A Personal AI Assistant for Every Student | Hong Kong Schools</title>
+    <meta name="description" content="Hong Kong's first EdTech company offering every student their own private AI assistant. AI Maker Academy courses + dedicated AI platform. Aligned with EDB 'AI Literacy' funding.">
+    <meta name="keywords" content="AI education,AI course,Hong Kong schools,AI literacy,AI maker,AI assistant,private AI,student AI platform,teacher training,STEM education,Python teaching,AI ethics">
+    <meta name="author" content="Precious AI Limited">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.preciousai.hk/en.html">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.preciousai.hk/en.html">
+    <meta property="og:title" content="Precious AI | A Personal AI Assistant for Every Student">
+    <meta property="og:description" content="Hong Kong's first EdTech company offering every student their own private AI assistant. AI courses + dedicated AI platform for schools.">
+    <meta property="og:image" content="https://www.preciousai.hk/og-image.png">
+    <meta property="og:locale" content="en_HK">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Precious AI | A Personal AI Assistant for Every Student">
+    <meta name="twitter:description" content="AI courses + dedicated AI assistant platform for Hong Kong schools. Aligned with EDB funding.">
+    <meta name="twitter:image" content="https://www.preciousai.hk/og-image.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Precious AI Limited",
+      "alternateName": "珍貴人工智慧有限公司",
+      "url": "https://www.preciousai.hk",
+      "logo": "https://www.preciousai.hk/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+852-6433-7170",
+        "contactType": "customer service",
+        "availableLanguage": ["Chinese", "Cantonese", "English"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hong Kong",
+        "addressCountry": "HK"
+      }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,7 +61,9 @@
     <style>
         html { scroll-behavior: smooth; }
         .gradient-bg { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 50%, #4c1d95 100%); }
-        .badge-google { background: linear-gradient(90deg, #4285f4, #34a853, #fbbc05, #ea4335); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { box-shadow: 0 0 40px rgba(124, 58, 237, 0.3); }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        .float { animation: float 3s ease-in-out infinite; }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -35,15 +75,18 @@
                 <img src="logo.png" alt="Precious AI" class="h-10 w-10 rounded-lg">
                 <div>
                     <div class="text-lg font-bold text-brand">Precious AI</div>
-                    <div class="text-xs text-gray-500">AI Education Training</div>
+                    <div class="text-xs text-gray-500">珍貴人工智能</div>
                 </div>
             </div>
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#courses" class="text-gray-600 hover:text-brand transition">Courses</a>
-                <a href="#features" class="text-gray-600 hover:text-brand transition">Why Us</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#platform" class="text-gray-600 hover:text-brand transition">AI Platform</a>
+                <a href="#student" class="text-gray-600 hover:text-brand transition">Student Course</a>
+                <a href="#teacher" class="text-gray-600 hover:text-brand transition">Teacher Training</a>
                 <a href="#pricing" class="text-gray-600 hover:text-brand transition">Pricing</a>
-                <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg font-semibold hover:bg-brand-dark transition">Contact</a>
-                <a href="index.html" class="text-gray-500 hover:text-brand transition text-sm">中文</a>
+                <a href="#funding" class="text-gray-600 hover:text-brand transition">Funding</a>
+                <a href="https://app.preciousai.hk/login" class="text-brand font-semibold hover:text-brand-dark transition">Log In</a>
+                <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg font-semibold hover:bg-brand-dark transition">Contact Us</a>
+                <a href="/" class="text-gray-400 hover:text-brand transition text-sm">中文</a>
             </div>
             <button id="menu-btn" class="md:hidden text-gray-600">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,377 +94,622 @@
                 </svg>
             </button>
         </div>
-        <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <a href="#courses" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Courses</a>
-            <a href="#features" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Why Us</a>
+            <a href="#platform" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">AI Platform</a>
+            <a href="#student" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Student Course</a>
+            <a href="#teacher" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Teacher Training</a>
             <a href="#pricing" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Pricing</a>
-            <a href="#contact" class="block px-4 py-3 text-brand font-semibold hover:bg-gray-50">Contact</a>
-            <a href="index.html" class="block px-4 py-3 text-gray-500 hover:bg-gray-50">中文版</a>
+            <a href="#funding" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">Funding</a>
+            <a href="https://app.preciousai.hk/login" class="block px-4 py-3 text-brand font-semibold">Log In</a>
+            <a href="#contact" class="block px-4 py-3 bg-brand text-white font-semibold hover:bg-brand-dark">📱 Contact Us</a>
+            <a href="/" class="block px-4 py-3 text-gray-400 hover:bg-gray-50 text-sm">🌐 中文版</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="gradient-bg min-h-screen flex items-center pt-16">
-        <div class="max-w-6xl mx-auto px-4 py-20 text-center">
-            <!-- Google Badge -->
-            <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
-                <span class="text-white/90 text-sm">🌐 </span>
-                <span class="font-bold text-sm mx-1 badge-google">Google Cloud</span>
-                <span class="text-white/90 text-sm"> Funded Startup</span>
+        <div class="max-w-6xl mx-auto px-4 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                        <span class="text-white/90 text-sm">🎯 Aligned with EDB "</span>
+                        <span class="font-bold text-sm mx-1 text-accent">AI Literacy</span>
+                        <span class="text-white/90 text-sm">" Funding</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                        Every Student Gets<br>
+                        <span class="text-accent">A Personal AI Assistant</span>
+                    </h1>
+                    <p class="text-xl text-purple-100 mb-6">
+                        Not ChatGPT. Not a chatbot.<br>
+                        It's a <strong class="text-white">real AI workspace that belongs to the student</strong>.
+                    </p>
+                    <p class="text-purple-200 mb-8">
+                        Write code · Search the web · Create visuals · Cantonese & English · 24/7 learning partner
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="inline-block bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-600 transition shadow-lg text-center">
+                            📱 Free Consultation
+                        </a>
+                        <a href="#platform" class="inline-block bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition border border-white/30 text-center">
+                            Learn More →
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 glow float">
+                        <div class="bg-gray-900 rounded-xl p-4 font-mono text-sm">
+                            <div class="flex items-center gap-2 mb-3">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <span class="text-gray-500 text-xs ml-2">AI Assistant — Student</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex gap-2">
+                                    <span class="text-green-400">Student:</span>
+                                    <span class="text-gray-300">Help me write a Python BMI calculator</span>
+                                </div>
+                                <div class="flex gap-2">
+                                    <span class="text-blue-400">AI:</span>
+                                    <span class="text-gray-300">Sure! I'll write it and explain each line 👇</span>
+                                </div>
+                                <div class="bg-gray-800 rounded p-2 text-green-300 text-xs">
+                                    <div>height = float(input("Your height (m): "))</div>
+                                    <div>weight = float(input("Your weight (kg): "))</div>
+                                    <div>bmi = weight / (height ** 2)</div>
+                                    <div>print(f"Your BMI is {bmi:.1f}")</div>
+                                </div>
+                                <div class="flex gap-2">
+                                    <span class="text-blue-400">AI:</span>
+                                    <span class="text-gray-300">▶️ Run it now? I can help you improve it!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                Training Doesn't End
-            </h1>
-            <p class="text-3xl md:text-5xl text-purple-200 font-light mb-4">
-                When The Class Does
-            </p>
-            <p class="text-xl text-purple-100 max-w-2xl mx-auto mb-4 mt-10">
-                <strong class="text-white">Practical</strong> AI Training for Hong Kong Schools
-            </p>
-            <p class="text-lg text-purple-200 max-w-xl mx-auto mb-10">
-                We don't just teach theory and leave.<br>
-                We provide <span class="text-accent font-bold">3-month WhatsApp support</span> + <span class="text-accent font-bold">50+ ready-to-use prompts</span>
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="inline-block bg-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-amber-600 transition shadow-lg">
-                    📱 Free Consultation
-                </a>
-                <a href="#pricing" class="inline-block bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition border border-white/30">
-                    💰 View Pricing
-                </a>
-            </div>
-            
-            <!-- Trust indicators -->
             <div class="mt-16 flex flex-wrap justify-center gap-8 text-purple-200 text-sm">
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl">🎯</span>
-                    <span>Eligible for EDB Funding</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl">🇭🇰</span>
-                    <span>Designed for HK Teachers</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span class="text-2xl">📱</span>
-                    <span>Ongoing Support</span>
-                </div>
+                <div class="flex items-center gap-2"><span class="text-2xl">🐍</span><span>Full Python Environment</span></div>
+                <div class="flex items-center gap-2"><span class="text-2xl">🌐</span><span>Web Search Capability</span></div>
+                <div class="flex items-center gap-2"><span class="text-2xl">🔒</span><span>Fully Isolated Per Student</span></div>
+                <div class="flex items-center gap-2"><span class="text-2xl">📊</span><span>Principal Dashboard</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
+    <!-- Problem Statement -->
     <section class="py-16 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8">Sound Familiar?</h2>
-            <div class="grid md:grid-cols-3 gap-6 text-left">
-                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-400">
-                    <p class="text-gray-700">"Attended an AI workshop, but don't know how to apply it at school" 😵</p>
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">The Reality Schools Face</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-4xl font-bold text-red-500 mb-2">95%</div>
+                    <p class="text-gray-600">of students already use AI</p>
+                    <p class="text-gray-400 text-sm mt-1">But schools have no oversight or tools</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-400">
-                    <p class="text-gray-700">"Want to use AI for lesson prep, but struggle with prompts" 🤔</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-4xl font-bold text-amber-500 mb-2">12%</div>
+                    <p class="text-gray-600">of teachers use AI daily</p>
+                    <p class="text-gray-400 text-sm mt-1">Tools aren't practical enough</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-red-400">
-                    <p class="text-gray-700">"Have questions after the course, but no one to ask" 😢</p>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+                    <div class="text-4xl font-bold text-brand mb-2">3%</div>
+                    <p class="text-gray-600">of schools have their own AI solution</p>
+                    <p class="text-gray-400 text-sm mt-1">97% rely on external tools</p>
+                </div>
+            </div>
+            <div class="mt-8 bg-white rounded-xl p-6 border-l-4 border-brand">
+                <p class="text-gray-700 text-lg">
+                    <strong>The question isn't "will students use AI?" — it's "how will schools manage and teach it?"</strong><br>
+                    <span class="text-gray-500">Banning it doesn't work. Ignoring it is worse. Schools need a safe, manageable AI solution.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Platform Section -->
+    <section id="platform" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-brand/10 text-brand px-4 py-1 rounded-full text-sm font-semibold mb-4">Core Product</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Dedicated AI Assistant Platform</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Not a shared chatbot. Not a simple Q&A tool.<br>
+                    <strong>Each student gets their own isolated AI workspace</strong> — like having their own AI computer.
+                </p>
+            </div>
+            
+            <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">🎓 What Students Get</h3>
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                    <div class="text-3xl mb-3">🤖</div>
+                    <h4 class="font-bold text-gray-800 mb-2">24/7 AI Assistant</h4>
+                    <p class="text-gray-600 text-sm">Speaks Cantonese & English, remembers every conversation, proactively checks on learning progress.</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                    <div class="text-3xl mb-3">🐍</div>
+                    <h4 class="font-bold text-gray-800 mb-2">Python Environment</h4>
+                    <p class="text-gray-600 text-sm">Full Python + 200+ packages. Not a simulation — real executable code. AI writes, debugs, and explains.</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                    <div class="text-3xl mb-3">🌐</div>
+                    <h4 class="font-bold text-gray-800 mb-2">Web Search</h4>
+                    <p class="text-gray-600 text-sm">AI searches the latest information and summarizes key points. Perfect for project research.</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                    <div class="text-3xl mb-3">🎨</div>
+                    <h4 class="font-bold text-gray-800 mb-2">Canvas</h4>
+                    <p class="text-gray-600 text-sm">Generate charts, posters, and data visualizations. No extra design software needed for presentations.</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                    <div class="text-3xl mb-3">💾</div>
+                    <h4 class="font-bold text-gray-800 mb-2">Personal Storage</h4>
+                    <p class="text-gray-600 text-sm">Each student has their own space with automatic cloud backup. Learning records persist across sessions.</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl border border-purple-100">
+                    <div class="text-3xl mb-3">🔒</div>
+                    <h4 class="font-bold text-gray-800 mb-2">Security Isolation</h4>
+                    <p class="text-gray-600 text-sm">Each student runs in a fully isolated Docker container. No cross-access. Enterprise-grade security.</p>
+                </div>
+            </div>
+            
+            <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">🏫 School Management Features</h3>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">📊</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Usage Monitoring</h4>
+                            <p class="text-gray-600 text-sm">See exactly how much each student uses. School-wide credit pool with automatic alerts below 20%.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">🛡️</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">AI Safety Scanning</h4>
+                            <p class="text-gray-600 text-sm">Automatic detection of inappropriate content (bullying, self-harm, violations). Only flagged conversations notify the principal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">👨‍🎓</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">Student Management</h4>
+                            <p class="text-gray-600 text-sm">CSV bulk upload of student lists, activation code management, password reset. No email required for students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-start gap-4">
+                        <div class="text-2xl">📋</div>
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-1">School Subdomain</h4>
+                            <p class="text-gray-600 text-sm">Each school gets its own URL (e.g. schoolname.preciousai.hk) for a professional branded experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-2xl p-8 max-w-4xl mx-auto">
+                <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">How is this different from ChatGPT?</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b-2 border-gray-200">
+                                <th class="text-left py-3 px-4 text-gray-500">Feature</th>
+                                <th class="text-center py-3 px-4 text-gray-400">ChatGPT</th>
+                                <th class="text-center py-3 px-4 text-brand font-bold">Precious AI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4">Write & run Python code</td>
+                                <td class="text-center py-3 px-4 text-gray-400">Limited</td>
+                                <td class="text-center py-3 px-4 text-green-600 font-bold">✅ Full environment</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4">Live web search</td>
+                                <td class="text-center py-3 px-4 text-gray-400">Paid only</td>
+                                <td class="text-center py-3 px-4 text-green-600 font-bold">✅ Included</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4">Principal usage monitoring</td>
+                                <td class="text-center py-3 px-4 text-red-400">❌</td>
+                                <td class="text-center py-3 px-4 text-green-600 font-bold">✅</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4">AI safety scanning</td>
+                                <td class="text-center py-3 px-4 text-red-400">❌</td>
+                                <td class="text-center py-3 px-4 text-green-600 font-bold">✅ Auto-detect</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4">Personal data cloud backup</td>
+                                <td class="text-center py-3 px-4 text-red-400">❌</td>
+                                <td class="text-center py-3 px-4 text-green-600 font-bold">✅ Auto-backup</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4">Full student isolation</td>
+                                <td class="text-center py-3 px-4 text-red-400">❌ Shared</td>
+                                <td class="text-center py-3 px-4 text-green-600 font-bold">✅ Docker isolated</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4">School branded subdomain</td>
+                                <td class="text-center py-3 px-4 text-red-400">❌</td>
+                                <td class="text-center py-3 px-4 text-green-600 font-bold">✅ school.preciousai.hk</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Cost per student/month</td>
+                                <td class="text-center py-3 px-4 text-gray-600">HK$156</td>
+                                <td class="text-center py-3 px-4 text-brand font-bold">~HK$133</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-center text-gray-400 text-xs mt-4">Cheaper than ChatGPT Plus, with 10x more features</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Course Section -->
+    <section id="student" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-brand/10 text-brand px-4 py-1 rounded-full text-sm font-semibold mb-4">Training Course</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">AI Maker Academy</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    14-session project-based course teaching students to become real AI makers.<br>
+                    Graduates receive an "<strong class="text-brand">AI Maker Certificate</strong>"
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-8 mb-10 shadow-sm">
+                <h3 class="text-xl font-bold text-gray-800 mb-6 text-center">📘 Course Structure</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-4 rounded-xl bg-blue-50">
+                        <div class="text-3xl mb-2">🔧</div>
+                        <h4 class="font-bold text-gray-800 mb-1">Equip Phase</h4>
+                        <p class="text-blue-600 text-sm font-semibold">Sessions 1–4</p>
+                        <p class="text-gray-500 text-sm mt-2">AI fundamentals + tools + topic selection</p>
+                    </div>
+                    <div class="text-center p-4 rounded-xl bg-purple-50">
+                        <div class="text-3xl mb-2">🏗️</div>
+                        <h4 class="font-bold text-gray-800 mb-1">Build Phase</h4>
+                        <p class="text-purple-600 text-sm font-semibold">Sessions 5–10</p>
+                        <p class="text-gray-500 text-sm mt-2">Team-based AI project creation</p>
+                    </div>
+                    <div class="text-center p-4 rounded-xl bg-amber-50">
+                        <div class="text-3xl mb-2">🎤</div>
+                        <h4 class="font-bold text-gray-800 mb-1">Showcase Phase</h4>
+                        <p class="text-amber-600 text-sm font-semibold">Sessions 11–14</p>
+                        <p class="text-gray-500 text-sm mt-2">AI ethics + Demo Day presentations</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-4 mb-10">
+                <div class="bg-white p-5 rounded-xl shadow-sm text-center border-t-4 border-blue-400">
+                    <div class="text-3xl mb-2">💬</div>
+                    <h4 class="font-bold text-gray-800 text-sm">AI Chatbot</h4>
+                    <p class="text-gray-500 text-xs mt-1">Build your own AI conversation bot</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm text-center border-t-4 border-red-400">
+                    <div class="text-3xl mb-2">🎬</div>
+                    <h4 class="font-bold text-gray-800 text-sm">AI Video</h4>
+                    <p class="text-gray-500 text-xs mt-1">Create video content with AI</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm text-center border-t-4 border-green-400">
+                    <div class="text-3xl mb-2">🎮</div>
+                    <h4 class="font-bold text-gray-800 text-sm">AI Game</h4>
+                    <p class="text-gray-500 text-xs mt-1">Design games with AI assistance</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm text-center border-t-4 border-purple-400">
+                    <div class="text-3xl mb-2">📖</div>
+                    <h4 class="font-bold text-gray-800 text-sm">AI Comic</h4>
+                    <p class="text-gray-500 text-xs mt-1">Generate comic art with AI</p>
+                </div>
+            </div>
+            
+            <div class="bg-brand/5 rounded-2xl p-8 max-w-3xl mx-auto">
+                <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">Every student graduates with</h3>
+                <div class="grid sm:grid-cols-2 gap-3">
+                    <div class="flex items-center gap-2"><span class="text-green-500">✅</span><span class="text-gray-700 text-sm">A complete AI project</span></div>
+                    <div class="flex items-center gap-2"><span class="text-green-500">✅</span><span class="text-gray-700 text-sm">AI Maker Certificate</span></div>
+                    <div class="flex items-center gap-2"><span class="text-green-500">✅</span><span class="text-gray-700 text-sm">Demo Day presentation experience</span></div>
+                    <div class="flex items-center gap-2"><span class="text-green-500">✅</span><span class="text-gray-700 text-sm">Practical AI tool skills</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
+    <!-- Teacher Training Section -->
+    <section id="teacher" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-brand mb-4">What Makes Us Different</h2>
-            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                Most training providers "teach and leave" — we don't
-            </p>
+            <div class="text-center mb-12">
+                <span class="inline-block bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-semibold mb-4">Teacher Training</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Teacher AI Workshop</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    We don't just teach — <strong>we support you until you master it</strong><br>
+                    3-month WhatsApp follow-up + 50+ ready-to-use prompt templates
+                </p>
+            </div>
             
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Feature 1 -->
-                <div class="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl border border-purple-100">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-brand rounded-xl flex items-center justify-center text-2xl">
-                            📱
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">Sound familiar?</h3>
+                    <div class="space-y-3">
+                        <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-red-400">
+                            <p class="text-gray-700 text-sm">"Attended an AI workshop but couldn't apply it at school" 😵</p>
                         </div>
-                        <h3 class="text-xl font-bold text-brand">3-Month WhatsApp Support</h3>
+                        <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-red-400">
+                            <p class="text-gray-700 text-sm">"Want to use AI for lesson prep but don't know how to prompt" 🤔</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-red-400">
+                            <p class="text-gray-700 text-sm">"Had questions after the course but no one to ask" 😢</p>
+                        </div>
                     </div>
-                    <p class="text-gray-600 mb-4">Questions after the course? Just WhatsApp us.</p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>✓ Dedicated group, not a public channel</li>
-                        <li>✓ Response within 24 hours</li>
-                        <li>✓ Help debug your prompts</li>
-                    </ul>
                 </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-gradient-to-br from-amber-50 to-white p-8 rounded-2xl border border-amber-100">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-accent rounded-xl flex items-center justify-center text-2xl">
-                            📋
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">We're different</h3>
+                    <div class="space-y-3">
+                        <div class="bg-green-50 p-4 rounded-xl border-l-4 border-green-400">
+                            <p class="text-gray-700 text-sm"><strong>📱 3-month WhatsApp support</strong> — Ask anytime</p>
                         </div>
-                        <h3 class="text-xl font-bold text-amber-600">50+ Prompt Templates</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">No need to start from scratch — copy and use.</p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>✓ Covers all subjects</li>
-                        <li>✓ Test creation, marking, lesson prep</li>
-                        <li>✓ Continuously updated</li>
-                    </ul>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl border border-green-100">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center text-2xl">
-                            🎯
+                        <div class="bg-green-50 p-4 rounded-xl border-l-4 border-green-400">
+                            <p class="text-gray-700 text-sm"><strong>📋 50+ prompt templates</strong> — Copy and use immediately</p>
                         </div>
-                        <h3 class="text-xl font-bold text-green-600">Hands-On Focus</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">70% practice, 30% theory.</p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>✓ Every teacher gets hands-on experience</li>
-                        <li>✓ Practice with your own materials</li>
-                        <li>✓ Ready to use immediately after</li>
-                    </ul>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl border border-blue-100">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center text-2xl">
-                            🤖
+                        <div class="bg-green-50 p-4 rounded-xl border-l-4 border-green-400">
+                            <p class="text-gray-700 text-sm"><strong>🎯 70% hands-on practice</strong> — Use it right after the workshop</p>
                         </div>
-                        <h3 class="text-xl font-bold text-blue-600">Personal AI Assistant (Advanced)</h3>
                     </div>
-                    <p class="text-gray-600 mb-4">Want to level up?</p>
-                    <ul class="text-gray-600 space-y-2 text-sm">
-                        <li>✓ Set up your own AI assistant</li>
-                        <li>✓ Automate repetitive tasks</li>
-                        <li>✓ Exclusive service</li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Courses Section -->
-    <section id="courses" class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-brand mb-4">Course Content</h2>
-            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                Designed for Hong Kong teachers, using Gemini (available in HK)
-            </p>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Module 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <div class="text-3xl mb-4">💡</div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Module 1: AI Basics + Prompt Skills</h3>
-                    <p class="text-gray-600 text-sm mb-3">1.5 hours</p>
-                    <ul class="text-gray-600 text-sm space-y-1">
-                        <li>• Generative AI fundamentals</li>
-                        <li>• Gemini hands-on practice</li>
-                        <li>• Core Prompt Engineering skills</li>
-                        <li>• Avoiding AI hallucinations</li>
-                    </ul>
+            <div class="mt-12 grid md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+                <div class="bg-gray-50 p-4 rounded-xl text-center">
+                    <div class="text-2xl mb-2">💡</div>
+                    <h4 class="font-bold text-gray-800 text-sm">AI Basics + Prompting</h4>
+                    <span class="text-gray-500 text-xs">1.5 hours</span>
                 </div>
-                
-                <!-- Module 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <div class="text-3xl mb-4">📝</div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Module 2: Tests + Marking + Prep</h3>
-                    <p class="text-gray-600 text-sm mb-3">2 hours</p>
-                    <ul class="text-gray-600 text-sm space-y-1">
-                        <li>• AI test generation (all subjects)</li>
-                        <li>• Essay marking + feedback</li>
-                        <li>• Lesson plans + worksheets</li>
-                        <li>• Building your prompt library</li>
-                    </ul>
+                <div class="bg-gray-50 p-4 rounded-xl text-center">
+                    <div class="text-2xl mb-2">📝</div>
+                    <h4 class="font-bold text-gray-800 text-sm">Exam & Lesson Prep</h4>
+                    <span class="text-gray-500 text-xs">2 hours</span>
                 </div>
-                
-                <!-- Module 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <div class="text-3xl mb-4">🎨</div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Module 3: AI Images + Videos</h3>
-                    <p class="text-gray-600 text-sm mb-3">1.5 hours</p>
-                    <ul class="text-gray-600 text-sm space-y-1">
-                        <li>• AI image generation for teaching</li>
-                        <li>• Simple AI video creation</li>
-                        <li>• Text-to-speech tools</li>
-                        <li>• Practical tool recommendations</li>
-                    </ul>
+                <div class="bg-gray-50 p-4 rounded-xl text-center">
+                    <div class="text-2xl mb-2">🎨</div>
+                    <h4 class="font-bold text-gray-800 text-sm">AI Images & Video</h4>
+                    <span class="text-gray-500 text-xs">1.5 hours</span>
                 </div>
-                
-                <!-- Module 4 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <div class="text-3xl mb-4">🤖</div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Module 4: Personal AI Assistant</h3>
-                    <p class="text-gray-600 text-sm mb-3">1 hour</p>
-                    <ul class="text-gray-600 text-sm space-y-1">
-                        <li>• Beyond single conversations</li>
-                        <li>• Automation workflows</li>
-                        <li>• OpenClaw introduction</li>
-                        <li>• Is it right for you?</li>
-                    </ul>
+                <div class="bg-gray-50 p-4 rounded-xl text-center">
+                    <div class="text-2xl mb-2">🤖</div>
+                    <h4 class="font-bold text-gray-800 text-sm">Personal AI Assistant</h4>
+                    <span class="text-gray-500 text-xs">1 hour</span>
                 </div>
-                
-                <!-- Module 5 -->
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <div class="text-3xl mb-4">⚖️</div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Module 5: AI Ethics + Policy</h3>
-                    <p class="text-gray-600 text-sm mb-3">1 hour</p>
-                    <ul class="text-gray-600 text-sm space-y-1">
-                        <li>• Copyright + privacy</li>
-                        <li>• School AI policy templates</li>
-                        <li>• Student academic integrity</li>
-                        <li>• Departmental guidelines</li>
-                    </ul>
-                </div>
-                
-                <!-- Bonus -->
-                <div class="bg-gradient-to-br from-brand to-brand-dark p-6 rounded-xl shadow-sm text-white">
-                    <div class="text-3xl mb-4">🎁</div>
-                    <h3 class="text-lg font-bold mb-2">Post-Course Support (Included)</h3>
-                    <p class="text-purple-100 text-sm mb-3">3 months</p>
-                    <ul class="text-purple-100 text-sm space-y-1">
-                        <li>• WhatsApp support group</li>
-                        <li>• 50+ prompt templates</li>
-                        <li>• Monthly resource updates</li>
-                        <li>• All questions answered</li>
-                    </ul>
+                <div class="bg-gray-50 p-4 rounded-xl text-center">
+                    <div class="text-2xl mb-2">⚖️</div>
+                    <h4 class="font-bold text-gray-800 text-sm">AI Ethics & Policy</h4>
+                    <span class="text-gray-500 text-xs">1 hour</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-white">
+    <section id="pricing" class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-brand mb-4">Packages</h2>
-            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                Flexible training packages based on your school's needs
-            </p>
+            <div class="text-center mb-12">
+                <span class="inline-block bg-accent/10 text-amber-700 px-4 py-1 rounded-full text-sm font-semibold mb-4">Pricing</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Choose the Right Plan for Your School</h2>
+                <p class="text-gray-600">All plans are eligible for EDB "AI Literacy" funding</p>
+            </div>
             
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Package A -->
-                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-brand transition">
-                    <div class="text-center mb-6">
-                        <h3 class="text-xl font-bold text-gray-800">Starter</h3>
-                        <p class="text-gray-500 text-sm mt-1">For teams new to AI</p>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>6-hour training (1 day)</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>AI basics + practical applications</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>Up to 20 teachers</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>30+ prompt templates</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>1-month WhatsApp support</span>
-                        </li>
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Plan A</h3>
+                    <p class="text-gray-500 text-sm mb-4">AI Maker Academy (Course)</p>
+                    <div class="mb-6"><span class="text-2xl font-bold text-gray-800">Contact Us</span></div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> 14 core sessions</li>
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Demo Day showcase</li>
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> AI Maker Certificate</li>
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> On-site instructors</li>
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Complete teaching materials</li>
                     </ul>
-                    <a href="#contact" class="block text-center bg-gray-100 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
-                        Get Quote
-                    </a>
+                    <a href="#contact" class="block text-center bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">Get Details</a>
                 </div>
                 
-                <!-- Package B - Featured -->
-                <div class="bg-gradient-to-b from-brand to-brand-dark rounded-2xl p-8 text-white transform md:scale-105 shadow-xl relative">
-                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                        <span class="bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-                    </div>
-                    <div class="text-center mb-6">
-                        <h3 class="text-xl font-bold">Standard</h3>
-                        <p class="text-purple-200 text-sm mt-1">Comprehensive AI mastery</p>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-2">
-                            <span class="text-accent mt-1">✓</span>
-                            <span>12-hour training (2 days)</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-accent mt-1">✓</span>
-                            <span>All 5 modules</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-accent mt-1">✓</span>
-                            <span>Up to 30 teachers</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-accent mt-1">✓</span>
-                            <span>50+ prompt templates</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-accent mt-1">✓</span>
-                            <span><strong>3-month</strong> WhatsApp support</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-accent mt-1">✓</span>
-                            <span>Department policy templates</span>
-                        </li>
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+                    <h3 class="text-lg font-bold text-gray-800 mb-1">Plan B</h3>
+                    <p class="text-gray-500 text-sm mb-4">AI Platform (Annual)</p>
+                    <div class="mb-6"><span class="text-2xl font-bold text-gray-800">Contact Us</span></div>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Personal AI assistant per student</li>
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Python + Web + Canvas</li>
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Principal dashboard</li>
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> AI safety scanning</li>
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> School branded subdomain</li>
+                        <li class="flex items-start gap-2"><span class="text-green-500 mt-0.5">✓</span> Persistent data backup</li>
                     </ul>
-                    <a href="#contact" class="block text-center bg-accent text-white py-3 rounded-lg font-semibold hover:bg-amber-600 transition">
-                        Get Quote
-                    </a>
+                    <a href="#contact" class="block text-center bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">Get Details</a>
                 </div>
                 
-                <!-- Package C -->
-                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-brand transition">
-                    <div class="text-center mb-6">
-                        <h3 class="text-xl font-bold text-gray-800">Comprehensive</h3>
-                        <p class="text-gray-500 text-sm mt-1">Deep training + ongoing support</p>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>18-hour training (3 days)</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>All modules + advanced content</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>Up to 40 teachers</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>Complete prompt library</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span><strong>6-month</strong> WhatsApp support</span>
-                        </li>
-                        <li class="flex items-start gap-2 text-gray-600">
-                            <span class="text-green-500 mt-1">✓</span>
-                            <span>On-site follow-up workshop</span>
-                        </li>
+                <div class="bg-white rounded-2xl p-8 shadow-lg border-2 border-brand relative">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand text-white px-4 py-1 rounded-full text-sm font-bold">⭐ Recommended</div>
+                    <h3 class="text-lg font-bold text-brand mb-1">Plan C</h3>
+                    <p class="text-gray-500 text-sm mb-4">Course + Platform Bundle</p>
+                    <div class="mb-2"><span class="text-2xl font-bold text-brand">Contact Us</span></div>
+                    <p class="text-green-600 text-sm font-semibold mb-4">Most Popular 🎉</p>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-6">
+                        <li class="flex items-start gap-2"><span class="text-brand mt-0.5 font-bold">✓</span> <strong>Everything in Plan A</strong></li>
+                        <li class="flex items-start gap-2"><span class="text-brand mt-0.5 font-bold">✓</span> <strong>Everything in Plan B</strong></li>
+                        <li class="flex items-start gap-2"><span class="text-brand mt-0.5 font-bold">✓</span> Teacher AI Workshop</li>
+                        <li class="flex items-start gap-2"><span class="text-brand mt-0.5 font-bold">✓</span> Priority support</li>
                     </ul>
-                    <a href="#contact" class="block text-center bg-gray-100 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
-                        Get Quote
-                    </a>
+                    <a href="#contact" class="block text-center bg-brand text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-dark transition">Enquire Now</a>
                 </div>
             </div>
             
-            <!-- Add-on -->
-            <div class="mt-12 max-w-2xl mx-auto">
-                <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center">
-                    <h4 class="font-bold text-blue-800 mb-2">🤖 Advanced: Personal AI Assistant Setup</h4>
-                    <p class="text-blue-700 text-sm">Set up a dedicated AI assistant for teachers to automate repetitive tasks. Contact us for details.</p>
+            <div class="mt-10 text-center">
+                <div class="inline-flex items-center bg-blue-50 rounded-full px-6 py-3">
+                    <span class="text-blue-700 text-sm">💡 All plans are eligible for EDB "AI Literacy for Learning and Teaching" funding</span>
                 </div>
+            </div>
+
+            <div class="mt-12 max-w-xl mx-auto">
+                <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">👤 Individual Plan (Teachers / Personal)</h3>
+                <div class="bg-white p-6 rounded-xl shadow-sm text-center border-2 border-brand">
+                    <h4 class="font-bold text-brand mb-1">AI Personal Assistant</h4>
+                    <div class="text-3xl font-bold text-brand my-3">HK$390<span class="text-sm text-gray-400 font-normal">/mo</span></div>
+                    <p class="text-gray-600 text-sm mb-3">Full AI workspace — Python environment · Web search · Canvas · Cloud backup</p>
+                    <a href="https://app.preciousai.hk/login" class="inline-block bg-brand text-white px-6 py-2 rounded-lg font-semibold hover:bg-brand-dark transition text-sm">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funding Alignment Section -->
+    <section id="funding" class="py-16 bg-blue-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="inline-block bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold mb-4">Government Funding</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Aligned with "AI Literacy" Funding</h2>
+                <p class="text-gray-600">Each school can receive <strong>HK$500,000</strong> one-time funding, valid until 2027/28 school year</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-brand border-2">
+                    <div class="text-3xl mb-3">🖥️</div>
+                    <h3 class="font-bold text-brand mb-2">AI Software & Platforms</h3>
+                    <p class="text-gray-600 text-sm"><strong>AI assistant platform</strong>, student management, usage monitoring, safety scanning</p>
+                    <span class="inline-block mt-2 bg-brand/10 text-brand px-2 py-1 rounded text-xs font-semibold">✓ Our Service</span>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-400">
+                    <div class="text-3xl mb-3">💻</div>
+                    <h3 class="font-bold text-gray-800 mb-2">Related Hardware</h3>
+                    <p class="text-gray-600 text-sm">AI PCs, servers, networking equipment</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-brand border-2">
+                    <div class="text-3xl mb-3">🎓</div>
+                    <h3 class="font-bold text-brand mb-2">Training & Activities</h3>
+                    <p class="text-gray-600 text-sm"><strong>Teacher AI workshop</strong> + <strong>Student AI Maker course</strong></p>
+                    <span class="inline-block mt-2 bg-brand/10 text-brand px-2 py-1 rounded text-xs font-semibold">✓ Our Service</span>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-white rounded-xl p-6">
+                <h3 class="font-bold text-gray-800 mb-4 text-center">Funding Covers</h3>
+                <div class="grid sm:grid-cols-2 gap-3 max-w-lg mx-auto">
+                    <div class="flex items-center gap-2"><span class="text-green-500">✅</span><span class="text-gray-700 text-sm">AI education courses & training</span></div>
+                    <div class="flex items-center gap-2"><span class="text-green-500">✅</span><span class="text-gray-700 text-sm">AI learning platform subscriptions</span></div>
+                    <div class="flex items-center gap-2"><span class="text-green-500">✅</span><span class="text-gray-700 text-sm">Teacher professional development</span></div>
+                    <div class="flex items-center gap-2"><span class="text-green-500">✅</span><span class="text-gray-700 text-sm">AI-related enrichment activities</span></div>
+                </div>
+                <p class="text-center text-gray-400 text-xs mt-4">Refer to EDB "AI Literacy for Learning and Teaching" funding guidelines for details</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-16 bg-gradient-to-r from-brand to-brand-dark text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why Choose Us?</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🇭🇰</div>
+                    <h3 class="font-bold mb-2">Made for Hong Kong</h3>
+                    <p class="text-purple-100 text-sm">Designed for HK curriculum<br>Cantonese AI conversations</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🔒</div>
+                    <h3 class="font-bold mb-2">Safe & Controlled</h3>
+                    <p class="text-purple-100 text-sm">Principal dashboard<br>Automatic AI safety detection</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="font-bold mb-2">Beyond a Chatbot</h3>
+                    <p class="text-purple-100 text-sm">A real AI workspace<br>Code + search + create</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="font-bold mb-2">Ongoing Support</h3>
+                    <p class="text-purple-100 text-sm">Post-course WhatsApp support<br>3 months of follow-up</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">Get Started in 3 Minutes</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                    <h4 class="font-bold text-gray-800 mb-1 text-sm">School uploads student roster</h4>
+                    <p class="text-gray-500 text-xs">One-click CSV upload</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                    <h4 class="font-bold text-gray-800 mb-1 text-sm">Students receive activation codes</h4>
+                    <p class="text-gray-500 text-xs">No email required</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                    <h4 class="font-bold text-gray-800 mb-1 text-sm">Enter code + set password</h4>
+                    <p class="text-gray-500 text-xs">AI auto-assigned</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-accent text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">✓</div>
+                    <h4 class="font-bold text-gray-800 mb-1 text-sm">Start learning!</h4>
+                    <p class="text-gray-500 text-xs">Works on any device</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-10">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="bg-white rounded-xl shadow-sm">
+                    <summary class="p-5 font-semibold text-gray-800 cursor-pointer hover:text-brand transition">Is student data safe?</summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm">Each student runs in a fully isolated AI container — invisible to one another. Data is stored on Google Cloud Storage with enterprise-grade security. Automatic cloud backup ensures nothing is lost.</div>
+                </details>
+                <details class="bg-white rounded-xl shadow-sm">
+                    <summary class="p-5 font-semibold text-gray-800 cursor-pointer hover:text-brand transition">Will students use AI to cheat?</summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm">The AI assistant is designed to help learning, not do homework. AI safety scanning automatically detects unusual usage patterns, and the system tracks student usage. Our course also teaches students responsible AI ethics.</div>
+                </details>
+                <details class="bg-white rounded-xl shadow-sm">
+                    <summary class="p-5 font-semibold text-gray-800 cursor-pointer hover:text-brand transition">Does school IT need to be involved?</summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm">Barely. We provide a complete school admin guide. As long as the school network has internet access, everything can be set up through the web browser.</div>
+                </details>
+                <details class="bg-white rounded-xl shadow-sm">
+                    <summary class="p-5 font-semibold text-gray-800 cursor-pointer hover:text-brand transition">Students don't need an email address?</summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm">Correct. Primary students may not have email. We use activation code + password login — no email required. Schools upload student rosters via CSV, and the system auto-generates activation codes.</div>
+                </details>
+                <details class="bg-white rounded-xl shadow-sm">
+                    <summary class="p-5 font-semibold text-gray-800 cursor-pointer hover:text-brand transition">What devices are supported?</summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm">Any device with a browser — computers, tablets, Chromebooks. No software installation required.</div>
+                </details>
+                <details class="bg-white rounded-xl shadow-sm">
+                    <summary class="p-5 font-semibold text-gray-800 cursor-pointer hover:text-brand transition">What if credits run out?</summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm">The system automatically alerts when credits drop below 20%. Schools can purchase additional credits anytime. Normal monthly usage of 1 million credits (~330 Q&As + 50 coding tasks) is very generous.</div>
+                </details>
+                <details class="bg-white rounded-xl shadow-sm">
+                    <summary class="p-5 font-semibold text-gray-800 cursor-pointer hover:text-brand transition">Can we try before we buy?</summary>
+                    <div class="px-5 pb-5 text-gray-600 text-sm">We can arrange a 30-minute live demo showcasing all features — from the principal dashboard to student AI conversations. WhatsApp us to schedule a time.</div>
+                </details>
             </div>
         </div>
     </section>
@@ -430,70 +718,54 @@
     <section id="contact" class="py-20 gradient-bg">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-4">Contact Us</h2>
-            <p class="text-purple-100 text-center mb-12 max-w-2xl mx-auto">
-                WhatsApp us directly — free consultation, no pressure
-            </p>
+            <p class="text-purple-100 text-center mb-12 max-w-2xl mx-auto">WhatsApp us directly — free consultation, no pressure</p>
             
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- WhatsApp CTA -->
                 <div class="bg-white rounded-2xl p-8 text-center">
                     <div class="text-6xl mb-4">📱</div>
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">WhatsApp Us</h3>
-                    <p class="text-gray-600 mb-6">Chat with us to find the right package for your school</p>
-                    <a href="https://wa.me/85264337170?text=Hi, I'd like to enquire about AI teacher training" 
+                    <p class="text-gray-600 mb-6">Chat with us directly to find the best plan for your school</p>
+                    <a href="https://wa.me/85264337170?text=Hi, I'd like to enquire about AI education courses and the AI assistant platform" 
                        class="inline-flex items-center gap-2 bg-green-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-600 transition shadow-lg">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         WhatsApp Us
                     </a>
-                    <p class="text-gray-400 text-sm mt-4">Usually reply within 2 hours</p>
+                    <p class="text-gray-400 text-sm mt-4">6433 7170 · Usually replies within 2 hours</p>
                 </div>
                 
-                <!-- Email Form -->
                 <div class="bg-white rounded-2xl p-8">
-                    <h3 class="text-xl font-bold text-gray-800 mb-6">Or Leave Your Details</h3>
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Or leave your details</h3>
                     <form id="contactForm" class="space-y-4">
                         <div>
                             <label for="school" class="block text-gray-700 font-medium mb-1 text-sm">School Name</label>
-                            <input type="text" id="school" name="school" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition"
-                                placeholder="School name">
+                            <input type="text" id="school" name="school" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition" placeholder="XX Secondary / Primary School">
                         </div>
                         <div>
                             <label for="name" class="block text-gray-700 font-medium mb-1 text-sm">Contact Person</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition"
-                                placeholder="Your name">
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition" placeholder="Your name">
                         </div>
                         <div>
                             <label for="phone" class="block text-gray-700 font-medium mb-1 text-sm">WhatsApp / Phone</label>
-                            <input type="tel" id="phone" name="phone" required
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition"
-                                placeholder="+852 XXXX XXXX">
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition" placeholder="9XXX XXXX">
                         </div>
                         <div>
-                            <label for="interest" class="block text-gray-700 font-medium mb-1 text-sm">Interested Package</label>
-                            <select id="interest" name="interest"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition">
+                            <label for="interest" class="block text-gray-700 font-medium mb-1 text-sm">Interested Plan</label>
+                            <select id="interest" name="interest" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition">
                                 <option value="">Please select</option>
-                                <option value="Starter (6 hours)">Starter (6 hours)</option>
-                                <option value="Standard (12 hours)">Standard (12 hours)</option>
-                                <option value="Comprehensive (18 hours)">Comprehensive (18 hours)</option>
-                                <option value="Want to learn more">Want to learn more first</option>
+                                <option value="Plan A - AI Course">Plan A — AI Maker Academy Course</option>
+                                <option value="Plan B - AI Platform">Plan B — AI Platform (Annual)</option>
+                                <option value="Plan C - Bundle">Plan C — Course + Platform Bundle ⭐</option>
+                                <option value="Teacher Training">Teacher AI Training Workshop</option>
+                                <option value="Individual">Individual AI Assistant</option>
+                                <option value="Learn More">Want to learn more first</option>
                             </select>
                         </div>
                         <div>
-                            <label for="teachers" class="block text-gray-700 font-medium mb-1 text-sm">Expected Participants</label>
-                            <input type="text" id="teachers" name="teachers"
-                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition"
-                                placeholder="Approx. XX teachers">
+                            <label for="participants" class="block text-gray-700 font-medium mb-1 text-sm">Expected Participants</label>
+                            <input type="text" id="participants" name="participants" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition" placeholder="Approx. XX students / teachers">
                         </div>
                         <div id="formMessage" class="hidden p-4 rounded-lg text-center"></div>
-                        <button type="submit" id="submitBtn"
-                            class="w-full bg-brand text-white py-3 rounded-lg font-semibold hover:bg-brand-dark transition">
-                            Submit Enquiry
-                        </button>
+                        <button type="submit" id="submitBtn" class="w-full bg-brand text-white py-3 rounded-lg font-semibold hover:bg-brand-dark transition">Submit Enquiry</button>
                     </form>
                     <script>
                     document.getElementById('contactForm').addEventListener('submit', async (e) => {
@@ -503,7 +775,6 @@
                         btn.disabled = true;
                         btn.textContent = 'Submitting...';
                         msg.className = 'hidden';
-                        
                         try {
                             const res = await fetch('/api/contact', {
                                 method: 'POST',
@@ -513,7 +784,7 @@
                                     name: document.getElementById('name').value,
                                     phone: document.getElementById('phone').value,
                                     interest: document.getElementById('interest').value,
-                                    teachers: document.getElementById('teachers').value
+                                    participants: document.getElementById('participants').value
                                 })
                             });
                             const data = await res.json();
@@ -521,12 +792,10 @@
                                 msg.className = 'p-4 rounded-lg text-center bg-green-100 text-green-700';
                                 msg.textContent = '✅ Enquiry received! We\'ll contact you soon 😊';
                                 e.target.reset();
-                            } else {
-                                throw new Error(data.error);
-                            }
+                            } else { throw new Error(data.error); }
                         } catch (err) {
                             msg.className = 'p-4 rounded-lg text-center bg-red-100 text-red-700';
-                            msg.textContent = '❌ Submission failed. Please WhatsApp us: 6433 7170';
+                            msg.textContent = '❌ Submission failed. Please WhatsApp us directly: 6433 7170';
                         }
                         btn.disabled = false;
                         btn.textContent = 'Submit Enquiry';
@@ -545,53 +814,43 @@
                     <div class="flex items-center gap-2 mb-4">
                         <img src="logo.png" alt="Precious AI" class="h-12 w-12 rounded-lg">
                         <div>
-                            <div class="font-bold">Precious AI Technology Limited</div>
-                            <div class="text-sm text-gray-400">珍貴人工智能科技有限公司</div>
+                            <div class="font-bold">Precious AI Limited</div>
+                            <div class="text-sm text-gray-400">珍貴人工智慧有限公司</div>
                         </div>
                     </div>
-                    <p class="text-gray-400 text-sm">
-                        Google Cloud funded startup<br>
-                        AI education training for Hong Kong schools
-                    </p>
+                    <p class="text-gray-400 text-sm">AI training courses and<br>dedicated AI assistant platform<br>for Hong Kong schools</p>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#courses" class="hover:text-white transition">Courses</a></li>
-                        <li><a href="#features" class="hover:text-white transition">Why Us</a></li>
+                        <li><a href="#platform" class="hover:text-white transition">AI Platform</a></li>
+                        <li><a href="#student" class="hover:text-white transition">Student Course</a></li>
+                        <li><a href="#teacher" class="hover:text-white transition">Teacher Training</a></li>
                         <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="#funding" class="hover:text-white transition">Funding</a></li>
+                        <li><a href="https://app.preciousai.hk/login" class="hover:text-white transition">Log In</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Contact Info</h4>
+                    <h4 class="font-semibold mb-4">Contact</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li>📱 WhatsApp: +852 6433 7170</li>
-                        <li>📧 info@preciousai.hk</li>
+                        <li>📱 WhatsApp: <a href="https://wa.me/85264337170" class="hover:text-white">6433 7170</a></li>
+                        <li>📧 <a href="mailto:info@preciousai.hk" class="hover:text-white">info@preciousai.hk</a></li>
+                        <li>🌐 <a href="https://app.preciousai.hk" class="hover:text-white">app.preciousai.hk</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2026 Precious AI Technology Limited. All rights reserved.</p>
+                <p>&copy; 2026 Precious AI Limited. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Menu Script -->
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
     </script>
-
 </body>
 </html>
