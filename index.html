@@ -858,9 +858,10 @@
             </div>
         </div>
         <script>
-        function goToSchool() {
+        async function goToSchool() {
             const code = document.getElementById('schoolCode').value.trim().toLowerCase();
             const errorEl = document.getElementById('schoolError');
+            const btn = document.querySelector('#school-portal button');
             if (!code) {
                 errorEl.textContent = '請輸入學校代碼';
                 errorEl.classList.remove('hidden');
@@ -872,7 +873,22 @@
                 return;
             }
             errorEl.classList.add('hidden');
-            window.location.href = 'https://' + code + '.preciousai.hk/login';
+            btn.textContent = '驗證中...';
+            btn.disabled = true;
+            try {
+                const res = await fetch('https://app.preciousai.hk/api/school/public-info?code=' + code);
+                if (res.ok) {
+                    window.location.href = 'https://' + code + '.preciousai.hk/login';
+                } else {
+                    errorEl.textContent = '找不到此學校代碼，請檢查後重試';
+                    errorEl.classList.remove('hidden');
+                }
+            } catch (e) {
+                // If API unreachable, still allow redirect (fail open)
+                window.location.href = 'https://' + code + '.preciousai.hk/login';
+            }
+            btn.textContent = '前往 →';
+            btn.disabled = false;
         }
         </script>
     </section>
@@ -1017,7 +1033,7 @@
                                     name: document.getElementById('name').value,
                                     phone: document.getElementById('phone').value,
                                     interest: document.getElementById('interest').value,
-                                    participants: document.getElementById('participants').value
+                                    teachers: document.getElementById('participants').value
                                 })
                             });
                             const data = await res.json();
