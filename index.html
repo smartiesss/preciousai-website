@@ -149,7 +149,21 @@
                 <a href="#teacher" class="text-gray-600 hover:text-brand transition">教師培訓</a>
                 <a href="#pricing" class="text-gray-600 hover:text-brand transition">方案報價</a>
                 <a href="#funding" class="text-gray-600 hover:text-brand transition">智啟學教</a>
-                <a href="https://app.preciousai.hk/login" class="text-brand font-semibold hover:text-brand-dark transition">登入</a>
+                <div class="relative group">
+                    <button class="text-brand font-semibold hover:text-brand-dark transition flex items-center gap-1">
+                        登入 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 hidden group-hover:block z-50">
+                        <a href="#school-portal" class="block px-4 py-3 hover:bg-gray-50 transition">
+                            <div class="font-semibold text-gray-800 text-sm">🏫 學校登入</div>
+                            <div class="text-xs text-gray-400">學生、教師、校長</div>
+                        </a>
+                        <a href="https://app.preciousai.hk/login" class="block px-4 py-3 hover:bg-gray-50 transition">
+                            <div class="font-semibold text-gray-800 text-sm">👤 個人登入</div>
+                            <div class="text-xs text-gray-400">個人版 AI 助理</div>
+                        </a>
+                    </div>
+                </div>
                 <a href="#contact" class="bg-brand text-white px-4 py-2 rounded-lg font-semibold hover:bg-brand-dark transition">聯絡我哋</a>
                 <a href="en.html" class="text-gray-400 hover:text-brand transition text-sm">EN</a>
             </div>
@@ -166,7 +180,8 @@
             <a href="#teacher" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">教師培訓</a>
             <a href="#pricing" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">方案報價</a>
             <a href="#funding" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">智啟學教</a>
-            <a href="https://app.preciousai.hk/login" class="block px-4 py-3 text-brand font-semibold">登入</a>
+            <a href="#school-portal" class="block px-4 py-3 text-brand font-semibold">🏫 學校登入</a>
+            <a href="https://app.preciousai.hk/login" class="block px-4 py-3 text-gray-600 hover:bg-gray-50">👤 個人登入</a>
             <a href="#contact" class="block px-4 py-3 bg-brand text-white font-semibold hover:bg-brand-dark">📱 聯絡我哋</a>
             <a href="en.html" class="block px-4 py-3 text-gray-400 hover:bg-gray-50 text-sm">🌐 English</a>
         </div>
@@ -812,6 +827,54 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- School Portal Entry -->
+    <section id="school-portal" class="py-16 bg-brand/5">
+        <div class="max-w-xl mx-auto px-4 text-center">
+            <span class="inline-block bg-brand/10 text-brand px-4 py-1 rounded-full text-sm font-semibold mb-4">快速入口</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">🏫 學校登入入口</h2>
+            <p class="text-gray-600 mb-6">
+                輸入學校代碼，即可進入你學校嘅專屬 AI 平台
+            </p>
+            <div class="bg-white rounded-2xl p-8 shadow-sm">
+                <div class="flex gap-3 max-w-sm mx-auto">
+                    <input type="text" id="schoolCode" placeholder="輸入學校代碼（例如 stpauls）" 
+                        class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-light focus:border-transparent transition text-center font-mono"
+                        onkeydown="if(event.key==='Enter')goToSchool()">
+                    <button onclick="goToSchool()" class="bg-brand text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-dark transition whitespace-nowrap">
+                        前往 →
+                    </button>
+                </div>
+                <p class="text-xs text-gray-400 mt-3">學校代碼由學校管理員提供。如果唔知道，請聯絡你嘅老師。</p>
+                <div id="schoolError" class="hidden mt-3 text-red-500 text-sm"></div>
+                
+                <div class="mt-6 pt-6 border-t border-gray-100">
+                    <p class="text-gray-500 text-sm mb-3">唔係學校用戶？</p>
+                    <a href="https://app.preciousai.hk/login" class="text-brand font-semibold hover:text-brand-dark text-sm">
+                        👤 個人版登入 →
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script>
+        function goToSchool() {
+            const code = document.getElementById('schoolCode').value.trim().toLowerCase();
+            const errorEl = document.getElementById('schoolError');
+            if (!code) {
+                errorEl.textContent = '請輸入學校代碼';
+                errorEl.classList.remove('hidden');
+                return;
+            }
+            if (!/^[a-z0-9-]+$/.test(code)) {
+                errorEl.textContent = '學校代碼只可以包含英文字母和數字';
+                errorEl.classList.remove('hidden');
+                return;
+            }
+            errorEl.classList.add('hidden');
+            window.location.href = 'https://' + code + '.preciousai.hk/login';
+        }
+        </script>
     </section>
 
     <!-- FAQ Section -->
