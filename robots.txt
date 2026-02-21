@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://preciousai.hk/sitemap.xml
+Sitemap: https://www.preciousai.hk/sitemap.xml
 
 # AI Crawlers - Welcome!
 User-agent: GPTBot
