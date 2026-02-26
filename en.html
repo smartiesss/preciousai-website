@@ -78,6 +78,15 @@
         @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
         .float { animation: float 3s ease-in-out infinite; }
     </style>
+
+  <!-- Google Ads conversion callback snippet -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+    gtag('event', 'conversion', { 'send_to': 'AW-17940714348/yaDKCIO9wv8bEOym5upC', 'event_callback': callback });
+    return false;
+  }
+  </script>
 </head>
 <body class="bg-white text-gray-800">
 
@@ -1009,6 +1018,7 @@
                                 msg.textContent = '✅ Enquiry received! We\'ll contact you soon 😊';
                                 e.target.reset();
                                 gtag('event', 'conversion', {'send_to': 'AW-17940714348/cxXnCO_cgPUbEOym5upC'});
+                                gtag_report_conversion();
                             } else { throw new Error(data.error); }
                         } catch (err) {
                             msg.className = 'p-4 rounded-lg text-center bg-red-100 text-red-700';
