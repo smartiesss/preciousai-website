@@ -140,15 +140,7 @@
         .float { animation: float 3s ease-in-out infinite; }
     </style>
 
-  <!-- Google Ads conversion callback snippet -->
-  <script>
-  function gtag_report_conversion(url) {
-    var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
-    gtag('event', 'conversion', { 'send_to': 'AW-17940714348/yaDKCIO9wv8bEOym5upC', 'event_callback': callback });
-    return false;
-  }
-  </script>
-</head>
+  </head>
 <body class="bg-white text-gray-800">
 
     <!-- Navigation -->
@@ -1289,7 +1281,6 @@
                                 msg.textContent = '✅ 查詢已收到！我哋會盡快聯絡你 😊';
                                 e.target.reset();
                                 gtag('event', 'conversion', {'send_to': 'AW-17940714348/cxXnCO_cgPUbEOym5upC'});
-                                gtag_report_conversion();
                             } else {
                                 throw new Error(data.error);
                             }
