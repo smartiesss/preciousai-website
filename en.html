@@ -1079,5 +1079,15 @@
         menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         mobileMenu.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
     </script>
+  <!-- WhatsApp conversion tracking -->
+  <script>
+    window.addEventListener('load', function (event) {
+      document.querySelectorAll('a[href*="wa.me"]').forEach(function (e) {
+        e.addEventListener('click', function () {
+          gtag('event', 'conversion', { 'send_to': 'AW-17940714348/yaDKCIO9wv8bEOym5upC' });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
