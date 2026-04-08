@@ -19,10 +19,10 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { school, name, phone, interest, teachers, notes } = req.body;
+    const { school, name, email, phone, interest, teachers, notes } = req.body;
 
     // Validate required fields
-    if (!school || !name || !phone) {
+    if (!school || !name || !phone || !email) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -31,6 +31,7 @@ export default async function handler(req, res) {
 
 🏫 學校：${school}
 👤 聯絡人：${name}
+📧 電郵：${email}
 📱 電話：${phone}
 📦 有興趣方案：${interest || '未選擇'}
 👥 老師人數：${teachers || '未填'}
